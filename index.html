@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<!-- Mod lại từ code profile của ThanhDieu -->
+<html lang="vi-VN" class="dark" data-title-page="Oshee_ - Profile">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Oshee_ - Profile</title>
+    <meta property="og:title" content="Oshee_ - Profile">
+    <link rel="shortcut icon" href="./assets/img/avatar.png" type="image/jpeg">
+    <meta name="description" content="Hi my name is Oshee_ / A freelance / web developer / yêu em">
+    <meta name="keywords" content="Oshee_ Profile">
+    <link rel="canonical" href="https://gilotex.pro.vn/">
+    <meta name="author" content="Oshee_">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#090d16">
+    <meta property="og:image" content="./assets/img/bg.webp">
+    <script>
+        (() => {
+            const root = document.documentElement;
+            let theme = "dark";
+            try {
+                if (window.localStorage && window.localStorage.getItem("oshee_theme") === "light") {
+                    theme = "light";
+                }
+            } catch {
+                /* Ignore storage errors under restricted file:// contexts */
+            }
+            const isDark = theme !== "light";
+            root.classList.toggle("dark", isDark);
+            root.classList.toggle("light", !isDark);
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) {
+                meta.setAttribute("content", isDark ? "#090d16" : "#f4f7fb");
+            }
+            root.classList.add("is-preloading");
+            window.__osheePreloaderFailsafe = window.setTimeout(() => {
+                root.classList.remove("is-preloading");
+                root.classList.add("is-loaded");
+                const el = document.getElementById("page-preloader");
+                if (el) {
+                    el.classList.add("is-leaving");
+                    el.setAttribute("aria-hidden", "true");
+                    el.hidden = true;
+                }
+            }, 6000);
+        })();
+    </script>
+    <noscript><style>.page-preloader{display:none!important}</style></noscript>
+    <link rel="stylesheet" href="./assets/css/style.css?v=4.2">
+    <link rel="stylesheet" href="./skill.css?v=4.2">
+</head>
+
+<body id="top">
+    <div id="page-preloader" class="page-preloader" role="status" aria-live="polite" aria-label="Đang tải trang">
+        <div class="preloader-aura" aria-hidden="true"></div>
+        <div class="preloader-inner">
+            <div class="preloader-emblem" aria-hidden="true">
+                <span class="preloader-halo preloader-halo--outer"></span>
+                <span class="preloader-halo"></span>
+                <svg class="preloader-star" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.25L14.15 9.85L21.75 12L14.15 14.15L12 21.75L9.85 14.15L2.25 12L9.85 9.85L12 2.25Z" fill="url(#preloader-star-grad)" />
+                    <defs>
+                        <linearGradient id="preloader-star-grad" x1="2.25" y1="2.25" x2="21.75" y2="21.75" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" style="stop-color: var(--accent-primary);" />
+                            <stop offset="100%" style="stop-color: var(--accent-secondary);" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="preloader-brand">
+                <span class="preloader-name">Oshee_</span>
+            </div>
+            <p class="preloader-whisper">Tĩnh lặng một nhịp… để ánh sáng tự tìm đường.</p>
+            <div class="preloader-track" aria-hidden="true">
+                <span class="preloader-wave"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-backdrop" aria-hidden="true"></div>
+
+    <div class="page-shell">
+        <header id="site-header" class="site-header">
+            <nav class="site-nav" aria-label="Điều hướng chính">
+                <a href="#top" class="brand-link">
+                    <span class="magic">
+                        <span class="magic-star" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 13.5351V3H20V5H14V17C14 19.2091 12.2091 21 10 21C7.79086 21 6 19.2091 6 17C6 14.7909 7.79086 13 10 13C10.7286 13 11.4117 13.1948 12 13.5351ZM10 19C11.1046 19 12 18.1046 12 17C12 15.8954 11.1046 15 10 15C8.89543 15 8 15.8954 8 17C8 18.1046 8.89543 19 10 19Z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 13.5351V3H20V5H14V17C14 19.2091 12.2091 21 10 21C7.79086 21 6 19.2091 6 17C6 14.7909 7.79086 13 10 13C10.7286 13 11.4117 13.1948 12 13.5351ZM10 19C11.1046 19 12 18.1046 12 17C12 15.8954 11.1046 15 10 15C8.89543 15 8 15.8954 8 17C8 18.1046 8.89543 19 10 19Z" />
+                            </svg>
+                        </span>
+                        <span class="magic-text">Hoàng Trung Hiếu</span>
+                    </span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="#bio" class="nav-anchor">Bio</a>
+                    <a href="#picture" class="nav-anchor">Picture</a>
+                    <a href="#skills" class="nav-anchor">Skills</a>
+                </div>
+
+                <div class="header-actions">
+                    <button type="button" class="icon-btn change-theme" aria-label="Chuyển giao diện sáng hoặc tối" title="Đổi giao diện Sáng / Tối">
+                        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v2" />
+                            <path d="M12 20v2" />
+                            <path d="m4.93 4.93 1.41 1.41" />
+                            <path d="m17.66 17.66 1.41 1.41" />
+                            <path d="M2 12h2" />
+                            <path d="M20 12h2" />
+                            <path d="m6.34 17.66-1.41 1.41" />
+                            <path d="m19.07 4.93-1.41 1.41" />
+                        </svg>
+                        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                        </svg>
+                    </button>
+
+                    <button type="button" class="icon-btn" id="openModalBtn" data-qr-src="./assets/img/qr-code.jpg" aria-label="Mở mã QR" title="Mã QR">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect width="5" height="5" x="3" y="3" rx="1" />
+                            <rect width="5" height="5" x="16" y="3" rx="1" />
+                            <rect width="5" height="5" x="3" y="16" rx="1" />
+                            <path d="M21 16h-3a2 2 0 0 0-2 2v3" />
+                            <path d="M21 21v.01" />
+                            <path d="M12 7v3a2 2 0 0 1-2 2H7" />
+                            <path d="M3 12h.01" />
+                            <path d="M12 3h.01" />
+                            <path d="M12 16v.01" />
+                            <path d="M16 12h1" />
+                            <path d="M21 12v.01" />
+                            <path d="M12 21v-1" />
+                        </svg>
+                    </button>
+
+                    <button type="button" class="icon-btn confirm-btn" aria-label="Bật hoặc tắt nhạc nền" aria-pressed="false" title="Nhạc nền">
+                        <svg class="icon-music" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 18V5l12-2v13" />
+                            <circle cx="6" cy="18" r="3" />
+                            <circle cx="18" cy="16" r="3" />
+                        </svg>
+                        <span class="eq-bars" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="hero-card animate show" aria-label="Thông tin cá nhân">
+                <div class="avatar-wrap">
+                    <img src="./assets/img/avatar.png" alt="profile" class="avatar-img" width="148" height="148">
+                    <img src="./assets/img/khung.png" alt="" class="crown3" aria-hidden="true">
+                </div>
+
+                <div class="identity-block">
+                    <div class="name-row">
+                        <h1 class="profile-name">Oshee_</h1>
+                        <button type="button" class="verified-container" aria-label="Đã xác minh">
+                            <img class="blue-tick" src="./assets/img/icon/tick.png" alt="Tích xanh" width="20" height="20">
+                            <span class="verified-tooltip" role="tooltip">
+                                <span>Đã xác minh</span>
+                                <span class="verified-tooltip-arrow" aria-hidden="true"></span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <button type="button" class="thought-pill" title="Nhấn để đổi châm ngôn">
+                        <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z" />
+                        </svg>
+                        <span id="cham-ngon" class="thought-text">Sống hết mình cho hiện tại, vì tương lai bắt đầu từ từng nỗ lực hôm nay.</span>
+                    </button>
+                </div>
+
+                <p class="status-line">
+                    Nếu bạn nhắn mà tôi không reply thì có thể là tôi đang ngủ hoặc...
+                    <button type="button" class="spoiler-pill" aria-expanded="false" title="Di chuột hoặc chạm để xem">
+                        <span class="spoiler-text">Đã chết.🌚</span>
+                    </button>
+                </p>
+
+                <div class="social-row">
+                    <div class="info-chip">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>Vietnam / Vinh Phuc</span>
+                    </div>
+
+                    <a class="social-chip social-facebook" href="https://www.facebook.com/hoangtrunghieu.18" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                        <span>My Facebook</span>
+                    </a>
+
+                    <a class="social-chip social-tiktok" href="https://www.tiktok.com/@trungghieu201" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                        </svg>
+                        <span>My TikTok</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="bio" class="section-row animate show">
+                <div class="section-label">
+                    <h2>Bio</h2>
+                </div>
+                <div class="section-panel bio-card">
+                    <p class="bio-roles">Developer / Designer / <del>Yêu em </del></p>
+                    <blockquote class="bio-quote">
+                        <svg class="bio-sparkle" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+                        </svg>
+                        <span>Nỗ lực và nỗ lực, ngay cả trong những đêm lặng lẽ sau màn hình khi chưa kịp thấy trái ngọt. Cuộc đời có những đóa hoa nở sớm nhờ thiên phú, nhưng cũng có những loài cây chọn cách bám rễ sâu—tự mày mò, tự thử sai và kiên trì sửa chữa qua bao mùa giông bão để vươn mình kiêu hãnh. Bạn không cần phải sinh ra như một thiên tài mới trở nên đặc biệt; riêng việc bạn dám bắt đầu từ con số không, không ngừng tối ưu chính mình và chưa từng đầu hàng trước giới hạn của bản thân đã là một sự phi thường. Cứ lặng lẽ kiến tạo giá trị riêng và tỏa sáng đúng nhịp, đời của mình sẽ rực rỡ theo cách của mình.</span>
+                    </blockquote>
+                    <div class="bio-actions">
+                        <a class="cta-btn" href="https://gilotex.pro.vn" target="_blank" rel="noopener noreferrer">
+                            <span>Trang web code</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12" class="arrow-shaft" />
+                                <polyline points="12 5 19 12 12 19" class="arrow-head" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="picture" class="section-row animate show">
+                <div class="section-label">
+                    <h2>Picture</h2>
+                </div>
+                <div class="section-panel">
+                    <div class="gallery-grid">
+                        <a href="./assets/img/str.jpg" class="gallery-card" data-gallery-item data-gallery-src="./assets/img/str.jpg" data-gallery-alt="Ảnh Str - Oshee_">
+                            <img src="./assets/img/str.jpg" alt="Ảnh Str - Oshee_" class="gallery-img" loading="lazy">
+                            <span class="gallery-overlay" aria-hidden="true">
+                                <span class="gallery-zoom-pill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M15 3h6v6" />
+                                        <path d="M9 21H3v-6" />
+                                        <path d="M21 3l-7 7" />
+                                        <path d="M3 21l7-7" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </a>
+
+                        <a href="./assets/img/hth.jpg" class="gallery-card" data-gallery-item data-gallery-src="./assets/img/hth.jpg" data-gallery-alt="Ảnh HTH - Oshee_">
+                            <img src="./assets/img/hth.jpg" alt="Ảnh HTH - Oshee_" class="gallery-img" loading="lazy">
+                            <span class="gallery-overlay" aria-hidden="true">
+                                <span class="gallery-zoom-pill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M15 3h6v6" />
+                                        <path d="M9 21H3v-6" />
+                                        <path d="M21 3l-7 7" />
+                                        <path d="M3 21l7-7" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section-row animate show">
+                <div class="section-label">
+                    <h2>Skills</h2>
+                </div>
+                <div class="section-panel">
+                    <div class="skill-box">
+                        <div class="title">Technical Mastery</div>
+
+                        <div class="skills-grid">
+                            <div class="bar" style="--w:95%; --clr:#ff4d4d; --delay:0.05s;">
+                                <div class="info">
+                                    <span class="skill-name">
+                                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M4 3l1.5 16.5L12 21l6.5-1.5L20 3H4z" />
+                                            <path d="M16.5 8H8l.3 3.5h7.9l-.6 5.5-3.6 1-3.6-1-.2-2.2" />
+                                        </svg>
+                                        <span>HTML5</span>
+                                    </span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="track">
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="bar" style="--w:90%; --clr:#2196f3; --delay:0.12s;">
+                                <div class="info">
+                                    <span class="skill-name">
+                                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M4 3l1.5 16.5L12 21l6.5-1.5L20 3H4z" />
+                                            <path d="M7.5 8h9l-.8 4.5H8.5" />
+                                            <path d="M15.7 12.5l-.5 4.5-3.2 1-3.2-1-.2-2" />
+                                        </svg>
+                                        <span>CSS3</span>
+                                    </span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="track">
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="bar" style="--w:75%; --clr:#f59e0b; --delay:0.19s;">
+                                <div class="info">
+                                    <span class="skill-name">
+                                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <rect x="3" y="3" width="18" height="18" rx="3" />
+                                            <path d="M10 9v6a2 2 0 0 1-2 2H7" />
+                                            <path d="M14 15.5c.5.7 1.3 1 2.2 1 1.2 0 2-.6 2-1.5 0-1-.8-1.4-2.1-1.8-1.2-.4-2-.8-2-1.8 0-.9.8-1.5 1.9-1.5.9 0 1.6.3 2 .9" />
+                                        </svg>
+                                        <span>JavaScript</span>
+                                    </span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="track">
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="bar" style="--w:70%; --clr:#06b6d4; --delay:0.26s;">
+                                <div class="info">
+                                    <span class="skill-name">
+                                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="2" fill="currentColor" />
+                                            <ellipse cx="12" cy="12" rx="9.5" ry="3.8" />
+                                            <ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(60 12 12)" />
+                                            <ellipse cx="12" cy="12" rx="9.5" ry="3.8" transform="rotate(120 12 12)" />
+                                        </svg>
+                                        <span>React JS</span>
+                                    </span>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="track">
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="bar" style="--w:80%; --clr:#3776ab; --delay:0.33s;">
+                                <div class="info">
+                                    <span class="skill-name">
+                                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M12 3c-3 0-4 1.2-4 3.5V9h6v1H7c-2.2 0-4 1.3-4 4s1.8 4 4 4h2v-2.5c0-2 1.3-3.5 3.5-3.5h4.5c1.7 0 3-1.3 3-3V6.5C20 4.2 18 3 12 3z" />
+                                            <path d="M12 21c3 0 4-1.2 4-3.5V15h-6v-1h7c2.2 0 4-1.3 4-4" />
+                                            <circle cx="10" cy="6" r="0.8" fill="currentColor" />
+                                            <circle cx="14" cy="18" r="0.8" fill="currentColor" />
+                                        </svg>
+                                        <span>Python</span>
+                                    </span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="track">
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="bar" style="--w:78%; --clr:#68a063; --delay:0.4s;">
+                                <div class="info">
+                                    <span class="skill-name">
+                                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M12 2l8.5 4.9v10.2L12 22l-8.5-4.9V6.9L12 2z" />
+                                            <path d="M9.5 14.5v-5l5 5v-5" />
+                                        </svg>
+                                        <span>Node.js</span>
+                                    </span>
+                                    <span class="skill-percent">78%</span>
+                                </div>
+                                <div class="track">
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="bar" style="--w:60%; --clr:#e38c00; --delay:0.47s;">
+                                <div class="info">
+                                    <span class="skill-name">
+                                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <ellipse cx="12" cy="5" rx="8" ry="3" />
+                                            <path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
+                                            <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" />
+                                        </svg>
+                                        <span>SQL</span>
+                                    </span>
+                                    <span class="skill-percent">60%</span>
+                                </div>
+                                <div class="track">
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="bar" style="--w:68%; --clr:#3178c6; --delay:0.54s;">
+                                <div class="info">
+                                    <span class="skill-name">
+                                        <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <rect x="3" y="3" width="18" height="18" rx="3" />
+                                            <path d="M7.5 10h5" />
+                                            <path d="M10 10v7" />
+                                            <path d="M14.5 15.8c.5.5 1.1.8 1.9.8 1 0 1.7-.5 1.7-1.3 0-.9-.7-1.2-1.8-1.5-1-.3-1.7-.7-1.7-1.5 0-.8.7-1.3 1.7-1.3.7 0 1.3.2 1.7.6" />
+                                        </svg>
+                                        <span>TypeScript</span>
+                                    </span>
+                                    <span class="skill-percent">68%</span>
+                                </div>
+                                <div class="track">
+                                    <div class="fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img src="./assets/img/cat.webp" alt="Running Cat" class="footer-cat" width="44" height="30">
+                    <p class="footer-copy">© <samp>2026</samp> <a href="#top">OSHEE_</a>. All Rights Reserved.</p>
+                </div>
+                <div id="real-time" class="footer-clock" aria-label="Thời gian hiện tại">00:00:00</div>
+            </div>
+        </footer>
+    </div>
+
+    <button type="button" id="croll-to-top" class="scroll-top-btn" data-show="false" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+        <span class="scroll-percent">
+            <span class="text">0</span><span class="percent-sign">%</span>
+        </span>
+        <svg class="scroll-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m18 15-6-6-6 6" />
+        </svg>
+    </button>
+
+    <div id="now-playing" class="now-playing-pill" role="status" aria-live="polite" aria-atomic="true" data-playing="false" aria-hidden="true">
+        <span class="now-playing-visual" aria-hidden="true">
+            <span class="now-playing-ring"></span>
+            <span class="now-playing-eq">
+                <span></span><span></span><span></span>
+            </span>
+        </span>
+        <span class="now-playing-meta">
+            <span class="now-playing-label">Đang phát</span>
+            <span id="now-playing-title" class="now-playing-title"></span>
+        </span>
+        <button type="button" class="now-playing-next" aria-label="Chuyển bài tiếp theo" title="Chuyển bài tiếp theo" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="5 4 15 12 5 20 5 4" />
+                <line x1="19" y1="5" x2="19" y2="19" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="lightbox-modal" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-caption" hidden>
+        <div class="lightbox-backdrop" data-lightbox-close></div>
+        <div class="lightbox-dialog">
+            <div class="lightbox-toolbar">
+                <span id="lightbox-caption" class="lightbox-caption"></span>
+                <div class="lightbox-toolbar-right">
+                    <span id="lightbox-counter" class="lightbox-counter"></span>
+                    <button type="button" class="lightbox-close" data-lightbox-close aria-label="Đóng hộp thoại">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="lightbox-stage">
+                <button type="button" id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Ảnh trước">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>
+                </button>
+                <img id="lightbox-img" class="lightbox-img" src="./assets/img/qr-code.jpg" alt="">
+                <button type="button" id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Ảnh tiếp theo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="./assets/js/index.js?v=4.2" defer></script>
+</body>
+
+</html>

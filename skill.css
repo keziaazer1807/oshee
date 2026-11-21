@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Skills Section — Technical Mastery Card
+   High-contrast dark & light mode tokens, responsive 2-col grid, zero tooltip collision
+   ========================================================================== */
+
+:root {
+    --skill-card-bg: rgba(255, 255, 255, 0.94);
+    --skill-card-border: rgba(15, 23, 42, 0.09);
+    --skill-card-border-hover: rgba(2, 132, 199, 0.28);
+    --skill-title-color: #0f172a;
+    --skill-label-color: #1e293b;
+    --skill-track-bg: rgba(15, 23, 42, 0.09);
+    --skill-badge-bg: #eef2f7;
+    --skill-badge-text: #0f172a;
+    --skill-badge-border: rgba(15, 23, 42, 0.1);
+}
+
+html.dark {
+    --skill-card-bg: rgba(17, 24, 39, 0.88);
+    --skill-card-border: rgba(148, 163, 184, 0.14);
+    --skill-card-border-hover: rgba(56, 189, 248, 0.34);
+    --skill-title-color: #f8fafc;
+    --skill-label-color: #e2e8f0;
+    --skill-track-bg: rgba(148, 163, 184, 0.16);
+    --skill-badge-bg: rgba(30, 41, 59, 0.92);
+    --skill-badge-text: #f8fafc;
+    --skill-badge-border: rgba(148, 163, 184, 0.22);
+}
+
+.skill-box {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--skill-card-bg);
+    border-radius: 1.25rem;
+    border: 1px solid var(--skill-card-border);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (min-width: 640px) {
+    .skill-box {
+        padding: 1.85rem;
+    }
+}
+
+.skill-box:hover {
+    border-color: var(--skill-card-border-hover);
+    box-shadow: var(--shadow-hover);
+}
+
+.skill-box .title {
+    color: var(--skill-title-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 1.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.15rem 1.75rem;
+}
+
+@media (min-width: 640px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.skill-box .bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-box .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    color: var(--skill-label-color);
+    font-size: 0.94rem;
+    font-weight: 600;
+}
+
+.skill-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-width: 0;
+}
+
+.skill-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--clr);
+}
+
+html:not(.dark) .skill-icon {
+    color: color-mix(in srgb, var(--clr) 72%, #0f172a);
+}
+
+.skill-percent {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background-color: var(--skill-badge-bg);
+    color: var(--skill-badge-text);
+    border: 1px solid var(--skill-badge-border);
+    flex-shrink: 0;
+}
+
+.skill-box .track {
+    width: 100%;
+    height: 8px;
+    background: var(--skill-track-bg);
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-box .fill {
+    height: 100%;
+    width: var(--w);
+    max-width: 100%;
+    background: var(--clr);
+    border-radius: 999px;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--clr) 45%, transparent);
+    transform-origin: left center;
+    animation: skill-grow 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: var(--delay);
+}
+
+html.is-preloading .skill-box .fill {
+    animation-play-state: paused;
+}
+
+@keyframes skill-grow {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skill-box .fill {
+        animation: none;
+    }
+}
